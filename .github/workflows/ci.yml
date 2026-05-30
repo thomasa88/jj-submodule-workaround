@@ -80,7 +80,7 @@ jobs:
         toolchain: 1.89
         # comma-separated list of extra targets to install
         targets: ${{ matrix.extra_targets }}
-    - uses: taiki-e/install-action@6c1f7cf125e42770ff087ea443901b487cc5471a
+    - uses: taiki-e/install-action@0fd46367812ee04360509b4169d9f659d6892bb2
       with:
         tool: nextest
     - name: Install mold
@@ -201,7 +201,7 @@ jobs:
     - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       with:
         persist-credentials: false
-    - uses: EmbarkStudios/cargo-deny-action@a531616d8ce3b9177443e48a1159bc945a099823
+    - uses: EmbarkStudios/cargo-deny-action@bb137d7af7e4fb67e5f82a49c4fce4fad40782fe
       with:
         command: check ${{ matrix.checks }}
 
